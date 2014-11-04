@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    HomepageViewController *homepageVC = [HomepageVCManager createHomepageWithType:_configInfo.homepageType];
+    _navController = [[UINavigationController alloc]initWithRootViewController:nil];
+    _navController.navigationBarHidden = YES;
+    self.window.rootViewController = _navController;
+    
     return YES;
 }
 
