@@ -31,8 +31,10 @@
 - (void)addBackBtn;
 //添加导航左按钮
 - (void)addLeftBtnWithImg:(UIImage*)btnImg selectImg:(UIImage*)selImg;
+- (void)addLeftBtn:(NSString*)title;
 //添加导航右按钮
 - (void)addRightBtnWithImg:(UIImage*)btnImg selectImg:(UIImage*)selImg;
+- (void)addRightBtn:(NSString*)title;
 
 //添加等待提示
 - (void)hudShowWithLabel:(NSString*) labelText;
@@ -42,7 +44,7 @@
 
 - (void)onLeftBtnClick:(id)sender;
 - (void)onRightBtnClick:(id)sender;
-
+- (UIButton*)getLeftBtn;
 - (UIButton*)getRightBtn;
 
 - (BOOL)shouldAutorotate;

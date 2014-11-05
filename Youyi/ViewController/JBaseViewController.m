@@ -10,6 +10,9 @@
 #import "AppDelegate.h"
 #import "AFNetWorking.h"
 
+#define KLeftBtnTag  49
+#define KRightBtnTag 50
+
 @interface JBaseViewController ()
 {
     MBProgressHUD *m_loading;
@@ -91,15 +94,24 @@
 //添加导航左按钮
 - (void)addLeftBtnWithImg:(UIImage*)btnImg selectImg:(UIImage*)selImg;
 {
-    UIButton *btnUser = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btnUser.frame = CGRectMake(10 , (NAVBAR_HEIGHT-kTopBtnSize)/2.0,kTopBtnSize, kTopBtnSize);
-
-    [btnUser setBackgroundImage:btnImg forState:UIControlStateNormal];
-    [btnUser setBackgroundImage:selImg forState:UIControlStateHighlighted];
-    btnUser.layer.cornerRadius = 10; //圆形按钮的半径
-    [btnUser addTarget:self action:@selector(onLeftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:btnUser];
+    [self addLeftBtn:nil];
+    UIButton *leftBtn = [self getLeftBtn];
+    [leftBtn setBackgroundImage:btnImg forState:UIControlStateNormal];
+    [leftBtn setBackgroundImage:selImg forState:UIControlStateHighlighted];
+}
+- (void)addLeftBtn:(NSString *)title
+{
+    UIButton *leftBtn = (UIButton*)[self.view viewWithTag:KLeftBtnTag];
+    if (leftBtn == nil) {
+        leftBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        leftBtn.frame = CGRectMake(10 , (NAVBAR_HEIGHT-kTopBtnSize)/2.0,kTopBtnSize, kTopBtnSize);
+        [leftBtn setTitle:title forState:UIControlStateNormal];
+        leftBtn.layer.cornerRadius = 10; //圆形按钮的半径
+        leftBtn.tag = KLeftBtnTag;
+        [leftBtn addTarget:self action:@selector(onLeftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:leftBtn];
+    }
 }
 
 - (void)onLeftBtnClick:(id)sender
@@ -107,20 +119,32 @@
     
 }
 
+- (UIButton*)getLeftBtn
+{
+    UIButton *btnLeft = (UIButton*)[self.view viewWithTag:KLeftBtnTag];
+    return btnLeft;
+}
+
 //添加导航右按钮
 - (void)addRightBtnWithImg:(UIImage*)btnImg selectImg:(UIImage*)selImg;
 {
-    UIButton *btnRight = (UIButton*)[self.view viewWithTag:50];
+    [self addRightBtn:nil];
+    UIButton* btnRight = [self getRightBtn];
+    [btnRight setBackgroundImage:btnImg forState:UIControlStateNormal];
+    [btnRight setBackgroundImage:selImg forState:UIControlStateHighlighted];
+}
+- (void)addRightBtn:(NSString *)title
+{
+    UIButton *btnRight = (UIButton*)[self.view viewWithTag:KRightBtnTag];
     if (btnRight==nil) {
         btnRight = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         btnRight.frame = CGRectMake(self.view.bounds.size.width - 10 - kTopBtnSize , (NAVBAR_HEIGHT-kTopBtnSize)/2.0,kTopBtnSize, kTopBtnSize);
         btnRight.layer.cornerRadius = 10; //圆形按钮的半径
-        btnRight.tag = 50;
+        btnRight.tag = KRightBtnTag;
+        [btnRight setTitle:title forState:UIControlStateNormal];
         [btnRight addTarget:self action:@selector(onRightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btnRight];
     }
-    [btnRight setBackgroundImage:btnImg forState:UIControlStateNormal];
-    [btnRight setBackgroundImage:selImg forState:UIControlStateHighlighted];
 }
 
 - (void)onRightBtnClick:(id)sender
@@ -130,7 +154,7 @@
 
 - (UIButton*)getRightBtn
 {
-    UIButton *btnRight = (UIButton*)[self.view viewWithTag:50];
+    UIButton *btnRight = (UIButton*)[self.view viewWithTag:KRightBtnTag];
     return btnRight;
 }
 
