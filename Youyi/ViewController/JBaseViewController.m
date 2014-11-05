@@ -59,6 +59,7 @@
     frame.size.height = NAVBAR_HEIGHT+statusBarH;
     titleView = [[UIImageView alloc] initWithFrame:frame];
     titleView.userInteractionEnabled = YES;
+    titleView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:titleView];
     
     frame.origin = CGPointMake((SCREEN_WIDTH - 240)/2, statusBarH);
