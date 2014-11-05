@@ -15,6 +15,9 @@
     NSString        *_name;         //名称   (1-9个字符)
     NSString        *_action;       //意向达成时的动作名称，在意向界面中心显示，用来展示个性(1-2个字符)
     NSMutableArray  *_memberArray;  //意向成员
-    JPPForm         *_ppForm;       //意向表单，意向的详细描述
+    NSDate          *_date;         //意向时间  还需考虑
+    NSString        *_description;  //意向描述
+
+    JPPForm         *_ppForm;       //意向达成情况回顾表单
 }
 @end
