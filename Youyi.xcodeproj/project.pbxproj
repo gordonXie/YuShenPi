@@ -63,6 +63,7 @@
 		8E62576D1A08A71F00AC79B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E62576C1A08A71F00AC79B7 /* CoreGraphics.framework */; };
 		8E9CDC3F1A08A9B200D78F26 /* JBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC3E1A08A9B200D78F26 /* JBaseViewController.m */; };
 		8E9CDC421A08ADDE00D78F26 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9CDC411A08ADDE00D78F26 /* libsqlite3.dylib */; };
+		8E9CDC451A09BFD300D78F26 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC441A09BFD300D78F26 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,8 @@
 		8E9CDC3D1A08A9B200D78F26 /* JBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBaseViewController.h; sourceTree = "<group>"; };
 		8E9CDC3E1A08A9B200D78F26 /* JBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBaseViewController.m; sourceTree = "<group>"; };
 		8E9CDC411A08ADDE00D78F26 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		8E9CDC431A09BFD300D78F26 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8E9CDC441A09BFD300D78F26 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,6 +469,8 @@
 			children = (
 				8E9CDC3D1A08A9B200D78F26 /* JBaseViewController.h */,
 				8E9CDC3E1A08A9B200D78F26 /* JBaseViewController.m */,
+				8E9CDC431A09BFD300D78F26 /* HomeViewController.h */,
+				8E9CDC441A09BFD300D78F26 /* HomeViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				8E6257571A08A24B00AC79B7 /* MJRefreshConst.m in Sources */,
 				8E62573B1A08A24B00AC79B7 /* AFHTTPRequestOperation.m in Sources */,
 				8E6257641A08A24B00AC79B7 /* SDWebImagePrefetcher.m in Sources */,
+				8E9CDC451A09BFD300D78F26 /* HomeViewController.m in Sources */,
 				8E9CDC3F1A08A9B200D78F26 /* JBaseViewController.m in Sources */,
 				8E6256A71A08A12100AC79B7 /* main.m in Sources */,
 				8E62575F1A08A24B00AC79B7 /* MKAnnotationView+WebCache.m in Sources */,

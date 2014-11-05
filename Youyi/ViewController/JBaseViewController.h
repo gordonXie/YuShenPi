@@ -25,6 +25,8 @@
 
 //初始化界面元素
 - (void)initViews;
+//设置标题
+- (void)setTitle:(NSString*)title;
 //添加导航返回按钮
 - (void)addBackBtn;
 //添加导航左按钮

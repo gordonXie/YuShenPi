@@ -67,6 +67,11 @@
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [titleView addSubview:titleLabel];
 }
+//设置标题
+- (void)setTitle:(NSString*)title
+{
+    self.titleLabel.text = title;
+}
 //添加返回按钮
 - (void)addBackBtn
 {
