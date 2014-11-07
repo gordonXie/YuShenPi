@@ -67,6 +67,8 @@
 		8E9CDC541A09D17800D78F26 /* JPPForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC511A09D17800D78F26 /* JPPForm.m */; };
 		8E9CDC551A09D17800D78F26 /* JPurpose.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC531A09D17800D78F26 /* JPurpose.m */; };
 		8E9CDC581A09D2A800D78F26 /* JMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC571A09D2A800D78F26 /* JMember.m */; };
+		8EF745291A0B0B89005B47A8 /* PurposeCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF745281A0B0B89005B47A8 /* PurposeCreateViewController.m */; };
+		8EF7452F1A0B10DE005B47A8 /* UITextField+LabelAndImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7452E1A0B10DE005B47A8 /* UITextField+LabelAndImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +205,10 @@
 		8E9CDC531A09D17800D78F26 /* JPurpose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPurpose.m; sourceTree = "<group>"; };
 		8E9CDC561A09D2A800D78F26 /* JMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMember.h; sourceTree = "<group>"; };
 		8E9CDC571A09D2A800D78F26 /* JMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMember.m; sourceTree = "<group>"; };
+		8EF745271A0B0B89005B47A8 /* PurposeCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurposeCreateViewController.h; sourceTree = "<group>"; };
+		8EF745281A0B0B89005B47A8 /* PurposeCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurposeCreateViewController.m; sourceTree = "<group>"; };
+		8EF7452D1A0B10DE005B47A8 /* UITextField+LabelAndImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LabelAndImage.h"; sourceTree = "<group>"; };
+		8EF7452E1A0B10DE005B47A8 /* UITextField+LabelAndImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LabelAndImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +372,8 @@
 				8E6256F61A08A24B00AC79B7 /* UIView+SuperView.m */,
 				8E6256F71A08A24B00AC79B7 /* XCommon.h */,
 				8E6256F81A08A24B00AC79B7 /* XCommon.m */,
+				8EF7452D1A0B10DE005B47A8 /* UITextField+LabelAndImage.h */,
+				8EF7452E1A0B10DE005B47A8 /* UITextField+LabelAndImage.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -477,6 +485,7 @@
 		8E9CDC3C1A08A9B200D78F26 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8EF745261A0B0B3F005B47A8 /* Purpose */,
 				8E9CDC3D1A08A9B200D78F26 /* JBaseViewController.h */,
 				8E9CDC3E1A08A9B200D78F26 /* JBaseViewController.m */,
 				8E9CDC431A09BFD300D78F26 /* HomeViewController.h */,
@@ -508,6 +517,15 @@
 				8E9CDC571A09D2A800D78F26 /* JMember.m */,
 			);
 			path = DataModle;
+			sourceTree = "<group>";
+		};
+		8EF745261A0B0B3F005B47A8 /* Purpose */ = {
+			isa = PBXGroup;
+			children = (
+				8EF745271A0B0B89005B47A8 /* PurposeCreateViewController.h */,
+				8EF745281A0B0B89005B47A8 /* PurposeCreateViewController.m */,
+			);
+			name = Purpose;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,7 +639,9 @@
 				8E62573C1A08A24B00AC79B7 /* AFImageRequestOperation.m in Sources */,
 				8E62573E1A08A24B00AC79B7 /* AFJSONUtilities.m in Sources */,
 				8E62575C1A08A24B00AC79B7 /* UIView+Extension.m in Sources */,
+				8EF7452F1A0B10DE005B47A8 /* UITextField+LabelAndImage.m in Sources */,
 				8E62575A1A08A24B00AC79B7 /* UIScrollView+Extension.m in Sources */,
+				8EF745291A0B0B89005B47A8 /* PurposeCreateViewController.m in Sources */,
 				8E6257421A08A24B00AC79B7 /* AFPropertyListRequestOperation.m in Sources */,
 				8E6257461A08A24B00AC79B7 /* NSData+Base64.m in Sources */,
 				8E6256AD1A08A12100AC79B7 /* ViewController.m in Sources */,

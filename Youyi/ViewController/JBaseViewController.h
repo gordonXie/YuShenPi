@@ -15,6 +15,7 @@
 
 #define  kTopBtnSize  34.0f
 #define  kBackBtnFrame CGRectMake(10.0f, (NAVBAR_HEIGHT-kTopBtnSize)/2.0, kTopBtnSize, kTopBtnSize)
+#define  kViewEdgeSize    10.0f
 
 @interface JBaseViewController : UIViewController<MBProgressHUDDelegate,UIGestureRecognizerDelegate>
 

@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "PurposeCreateViewController.h"
 
 @interface HomeViewController ()
 {
@@ -56,6 +57,12 @@
 - (void)addNewPurpose
 {
     
+}
+
+- (void)onRightBtnClick:(id)sender
+{
+    PurposeCreateViewController *purposeCreateVC = [[PurposeCreateViewController alloc]init];
+    [appDelegate.navController pushViewController:purposeCreateVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
