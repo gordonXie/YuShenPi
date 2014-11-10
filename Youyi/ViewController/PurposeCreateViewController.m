@@ -9,7 +9,10 @@
 #import "PurposeCreateViewController.h"
 #import "UITextField+LabelAndImage.h"
 
-@interface PurposeCreateViewController ()<UITextFieldDelegate,UITextViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+#define KTableCellHeight 36.0
+#define KTableCellLeftSpace 15.0
+
+@interface PurposeCreateViewController ()<UITextFieldDelegate,UITextViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     UIScrollView    *_baseScrollView;
     UITextField     *_nameTF;
@@ -17,6 +20,10 @@
     UITextView      *_descriptionTV;
 //    UIDatePicker    *_startDate;
 //    UIDatePicker    *_endDate;
+    
+    UITableView     *_tableView;
+    
+    //for PickerView
     UIPickerView    *_durationTime;
     UIPickerView    *_cycleTime;
     UIPickerView    *_startTime;
@@ -24,6 +31,11 @@
     
     NSArray         *_durationArray;
     NSArray         *_cycleArray;
+    
+    UIView *_bgView;
+    UIView *_pickerHeadView;
+    UIPickerView *_pickerView;
+    NSArray *_rangeArray;
 }
 @end
 
@@ -48,66 +60,221 @@
     _baseScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
     [self.view addSubview:_baseScrollView];
     
-    [self addItems];
+    [self addTableView];
 }
 
-- (void)addItems
+- (void)addTableView
 {
-    float startH = 20.0;
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, CONTENT_HEIGHT) style:UITableViewStyleGrouped];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [self.view addSubview:_tableView];
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==0) {
+        switch (indexPath.row) {
+            case 0:
+            case 1:
+            {
+                return KTableCellHeight;
+            }
+                break;
+            case 2:
+            {
+                return KTableCellHeight*2+[XCommon heightForString:_descriptionTV.text fontSize:17.0 andWidth:SCREEN_WIDTH];
+            }
+                
+            default:
+                break;
+        }
+    }else{
+        switch (indexPath.row) {
+            case 0:
+            case 1:
+            {
+                return KTableCellHeight;
+            }
+                break;
+            case 2:
+            {
+                return KTableCellHeight*2+[XCommon heightForString:_descriptionTV.text fontSize:17.0 andWidth:SCREEN_WIDTH];
+            }
+                
+            default:
+                break;
+        }
+    }
     
-    float TFWidth  = 300.0;
-    float TFHeight = 30.0;
+    return KTableCellHeight;
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if (indexPath.section==0) {
+            switch (indexPath.row) {
+                case 0:
+                {
+                    if (_nameTF==nil) {
+                        _nameTF = [[UITextField alloc]initWithFrame:CGRectMake(KTableCellLeftSpace, 0, SCREEN_WIDTH-KTableCellLeftSpace, KTableCellHeight)];
+                        [_nameTF setBackgroundColor:[UIColor clearColor]];
+                        _nameTF.placeholder = @"9个字以内";
+                        _nameTF.delegate = self;
+                        [_nameTF setLeftLabelWithText:@"名称:  "];
+                        [cell addSubview:_nameTF];
+                    }
+                }
+                    break;
+                case 1:
+                {
+                    if (_actionTF==nil) {
+                        _actionTF = [[UITextField alloc]initWithFrame:CGRectMake(KTableCellLeftSpace, 0, SCREEN_WIDTH-KTableCellLeftSpace, KTableCellHeight)];
+                        [_actionTF setBackgroundColor:[UIColor clearColor]];
+                        _actionTF.placeholder = @"显示个性";
+                        _actionTF.delegate = self;
+                        [_actionTF setLeftLabelWithText:@"action:  "];
+                        [cell addSubview:_actionTF];
+                    }
+                }
+                    break;
+                case 2:
+                {
+                    if (_descriptionTV==nil) {
+                        [cell addSubview:[self descriptionCellView]];
+                    }
+                }
+                    break;
+                default:
+                    break;
+            }
+        }else if (indexPath.section==1){
+            switch (indexPath.row) {
+                case 0:
+                {
+                    cell.textLabel.text = @"持续时间";
+                }
+                    break;
+                case 1:
+                {
+                    cell.textLabel.text = @"周期";
+                }
+                    break;
+                case 2:
+                {
+                    cell.textLabel.text = @"时间段";
+//                    cell.detailTextLabel.text = @"周五";  //不显示
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
     
-    float startW = (SCREEN_WIDTH-TFWidth)/2.0;
+    return cell;
+}
+
+-(UIView*)descriptionCellView
+{
     
-    float itemSpace = 10.0;
-    
-    CGRect nameRect = CGRectMake(startW, startH, TFWidth, TFHeight);
-    _nameTF = [[UITextField alloc]initWithFrame:nameRect];
-//    [_nameTF setBackground:[UIImage imageNamed:@"table_up@2x"]];
-    [_nameTF setBackgroundColor:[UIColor clearColor]];
-    _nameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    _nameTF.placeholder = @"9个字以内";
-    _nameTF.delegate = self;
-    [_nameTF setLeftLabelWithText:@"  名称:  "];
-    [_baseScrollView addSubview:_nameTF];
-    
-    CGRect actionRect = CGRectMake(startW, startH+TFHeight+itemSpace, 150, TFHeight);
-    _actionTF = [[UITextField alloc]initWithFrame:actionRect];
-    //    [_nameTF setBackground:[UIImage imageNamed:@"table_up@2x"]];
-    [_actionTF setBackgroundColor:[UIColor clearColor]];
-    _actionTF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    _actionTF.placeholder = @"显示个性";
-    _actionTF.delegate = self;
-    [_actionTF setLeftLabelWithText:@"  action:  "];
-    [_baseScrollView addSubview:_actionTF];
-    
-    UILabel *decLbl = [[UILabel alloc]initWithFrame:CGRectMake(startW, startH+TFHeight*2+itemSpace*2, 40, TFHeight)];
+    UIView *baseView = [[UIView alloc]initWithFrame:CGRectMake(KTableCellLeftSpace, 0, SCREEN_WIDTH-KTableCellLeftSpace, KTableCellHeight*3)];
+    UILabel *decLbl = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 40, KTableCellHeight)];
+    decLbl.font = [UIFont systemFontOfSize:15.0];
     decLbl.text = @"描述:";
-    [_baseScrollView addSubview:decLbl];
-    startH = startH+TFHeight*3+itemSpace*2;
+    [baseView addSubview:decLbl];
     
-    float TVHeight = 60.0;
-    CGRect desRect = CGRectMake(startW, startH, TFWidth, TVHeight);
+    CGRect desRect = CGRectMake(0, KTableCellHeight, baseView.frame.size.width, KTableCellHeight);
     _descriptionTV = [[UITextView alloc]initWithFrame:desRect];
     [_descriptionTV setBackgroundColor:[UIColor clearColor]];
     _descriptionTV.delegate = self;
-    [_baseScrollView addSubview:_descriptionTV];
-    startH += TVHeight+itemSpace;
+    _descriptionTV.font = [UIFont systemFontOfSize:KTableCellFontCommon];
+    [baseView addSubview:_descriptionTV];
     
-    CGRect durationRect = CGRectMake(startW, startH, 40, TFHeight);
-    UILabel *durationLbl = [[UILabel alloc]initWithFrame:durationRect];
-    durationLbl.text = @"周期:";
-    [_baseScrollView addSubview:durationLbl];
-    
-    _durationArray = [[NSArray alloc]initWithObjects:@"2周",@"3周",@"1月",@"2月",@"3月",@"6月", nil];
-    _durationTime = [[UIPickerView alloc]initWithFrame:CGRectMake(startW+durationRect.size.width, startH, 100, TFHeight)];
-    _durationTime.dataSource = self;
-    _durationTime.delegate = self;
-    [_baseScrollView addSubview:_durationTime];
-    
-    
+    return baseView;
 }
+
+
+- (void)addPickerView
+{
+    if (_pickerView==nil) {
+        _rangeArray = [[NSArray alloc]initWithObjects:@"1",@"5",@"10",@"20",@"50", nil];
+        
+        _bgView = [[UIView alloc]initWithFrame:self.view.bounds];
+        _bgView.backgroundColor = [UIColor whiteColor];
+        _bgView.alpha = 0.3;
+        [self.view addSubview:_bgView];
+        
+        float pickerHeight = 160.0;
+        float headHeight = 40.0;
+        _pickerHeadView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-headHeight-pickerHeight, SCREEN_WIDTH, headHeight)];
+        _pickerHeadView.backgroundColor = [XCommon hexStringToColor:@"#078065"];
+        _pickerHeadView.alpha = 0.9;
+        [self.view addSubview:_pickerHeadView];
+        
+        float btnWidth = 40.0;
+        float btnHeight = 30.0;
+        UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        cancelBtn.frame = CGRectMake(SCREEN_WIDTH-30-btnWidth*2, (headHeight-btnHeight)/2.0, btnWidth, btnHeight);
+        [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+        [cancelBtn addTarget:self action:@selector(onCancelBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [_pickerHeadView addSubview:cancelBtn];
+        
+        UIButton *completeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        completeBtn.frame = CGRectMake(SCREEN_WIDTH-10-btnWidth, (headHeight-btnHeight)/2.0, btnWidth, btnHeight);
+        [completeBtn setTitle:@"完成" forState:UIControlStateNormal];
+        [completeBtn addTarget:self action:@selector(onCompleteBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [_pickerHeadView addSubview:completeBtn];
+        
+        _pickerView = [[UIPickerView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-pickerHeight, SCREEN_WIDTH, pickerHeight)];
+        //        _pickerView.frame = CGRectOffset(_pickerView.frame, 0, 20);
+        _pickerView.backgroundColor = [XCommon hexStringToColor:@"#078065"];
+        _pickerView.dataSource = self;
+        _pickerView.delegate = self;
+        _pickerView.showsSelectionIndicator = YES;
+        
+        [self.view addSubview:_pickerView];
+    }
+    
+    [self selectPickerView];
+    _bgView.hidden = NO;
+    _pickerHeadView.hidden = NO;
+    _pickerView.hidden = NO;
+}
+
+- (void)selectPickerView
+{
+    NSString *rangeStr;
+    if ([XCommon isNullString:[XCommon UserDefaultGetValueFromKey:SEARCHRANGE]]) {
+        rangeStr = KDefaultSearchRange;
+    }else
+        rangeStr = [XCommon UserDefaultGetValueFromKey:SEARCHRANGE];
+    for (int i=0;i<_rangeArray.count;i++) {
+        if ([[_rangeArray objectAtIndex:i] isEqualToString:rangeStr]) {
+            [_pickerView selectRow:i inComponent:0 animated:NO];
+            break;
+        }
+    }
+}
+
 
 #pragma mark - PickerViewDataSource
 //以下3个方法实现PickerView的数据初始化
@@ -128,4 +295,25 @@
     return [_durationArray objectAtIndex:row];
 }
 
+- (void)onCancelBtnClick
+{
+    _bgView.hidden = YES;
+    _pickerHeadView.hidden = YES;
+    _pickerView.hidden = YES;
+
+    _durationTime.hidden = YES;
+}
+- (void)onCompleteBtnClick
+{
+    _bgView.hidden = YES;
+    _pickerHeadView.hidden = YES;
+    _pickerView.hidden = YES;
+    
+    int selIndex = [_pickerView selectedRowInComponent:0];
+    
+    NSString *rangeStr = [_rangeArray objectAtIndex:selIndex];
+    
+    [XCommon UserDefaultSetValue:rangeStr forKey:SEARCHRANGE];
+    [_tableView reloadData];
+}
 @end

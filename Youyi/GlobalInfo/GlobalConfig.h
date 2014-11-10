@@ -69,4 +69,9 @@
 #define SEARCHRANGE     @"searchRange"      //搜索范围
 #define KDefaultSearchRange   @"5"          //默认搜索范围
 
+#pragma mark - FontSize
+#define KTableCellFontCommon  15.0
+#define KTableCellFontBig     18.0
+#define KTableCellFontSmall   12.0
+
 #endif
