@@ -7,7 +7,6 @@
 //
 
 #import "HomeViewController.h"
-#import "PurposeCreateViewController.h"
 
 @interface HomeViewController ()
 {
@@ -26,9 +25,9 @@
 - (void)initViews
 {
     [super initViews];
-    [self setTitle:@"新建意向"];
-    [self addLeftBtn:@"我的"];
-    [self addRightBtn:@"广场"];
+    [self setTitle:@"预审批系统"];
+    [self addLeftBtn:@"返回"];
+    [self addRightBtn:@"导航"];
     
     [self addBaseScrollView];
 }
@@ -61,8 +60,7 @@
 
 - (void)onRightBtnClick:(id)sender
 {
-    PurposeCreateViewController *purposeCreateVC = [[PurposeCreateViewController alloc]init];
-    [appDelegate.navController pushViewController:purposeCreateVC animated:YES];
+   
 }
 
 - (void)didReceiveMemoryWarning {

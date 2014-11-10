@@ -13,7 +13,6 @@
 		8E6256B01A08A12100AC79B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E6256AE1A08A12100AC79B7 /* Main.storyboard */; };
 		8E6256B21A08A12100AC79B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6256B11A08A12100AC79B7 /* Images.xcassets */; };
 		8E6256B51A08A12100AC79B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6256B31A08A12100AC79B7 /* LaunchScreen.xib */; };
-		8E6256C11A08A12100AC79B7 /* YouyiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6256C01A08A12100AC79B7 /* YouyiTests.m */; };
 		8E62573A1A08A24B00AC79B7 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6256D01A08A24B00AC79B7 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8E62573B1A08A24B00AC79B7 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6256D21A08A24B00AC79B7 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8E62573C1A08A24B00AC79B7 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6256D41A08A24B00AC79B7 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -64,25 +63,11 @@
 		8E9CDC3F1A08A9B200D78F26 /* JBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC3E1A08A9B200D78F26 /* JBaseViewController.m */; };
 		8E9CDC421A08ADDE00D78F26 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9CDC411A08ADDE00D78F26 /* libsqlite3.dylib */; };
 		8E9CDC451A09BFD300D78F26 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC441A09BFD300D78F26 /* HomeViewController.m */; };
-		8E9CDC541A09D17800D78F26 /* JPPForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC511A09D17800D78F26 /* JPPForm.m */; };
-		8E9CDC551A09D17800D78F26 /* JPurpose.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC531A09D17800D78F26 /* JPurpose.m */; };
-		8E9CDC581A09D2A800D78F26 /* JMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDC571A09D2A800D78F26 /* JMember.m */; };
-		8EF745291A0B0B89005B47A8 /* PurposeCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF745281A0B0B89005B47A8 /* PurposeCreateViewController.m */; };
 		8EF7452F1A0B10DE005B47A8 /* UITextField+LabelAndImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7452E1A0B10DE005B47A8 /* UITextField+LabelAndImage.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8E6256BB1A08A12100AC79B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E6256991A08A12100AC79B7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8E6256A01A08A12100AC79B7;
-			remoteInfo = Youyi;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		8E6256A11A08A12100AC79B7 /* Youyi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youyi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E6256A11A08A12100AC79B7 /* YuShenPi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YuShenPi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6256A51A08A12100AC79B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E6256A61A08A12100AC79B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E6256A81A08A12100AC79B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,9 +77,6 @@
 		8E6256AF1A08A12100AC79B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E6256B11A08A12100AC79B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8E6256B41A08A12100AC79B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8E6256BA1A08A12100AC79B7 /* YouyiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouyiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E6256BF1A08A12100AC79B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E6256C01A08A12100AC79B7 /* YouyiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouyiTests.m; sourceTree = "<group>"; };
 		8E6256CB1A08A24B00AC79B7 /* GlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConfig.h; sourceTree = "<group>"; };
 		8E6256CC1A08A24B00AC79B7 /* MarkedWordsConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkedWordsConfig.h; sourceTree = "<group>"; };
 		8E6256CF1A08A24B00AC79B7 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -199,14 +181,6 @@
 		8E9CDC411A08ADDE00D78F26 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		8E9CDC431A09BFD300D78F26 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		8E9CDC441A09BFD300D78F26 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		8E9CDC501A09D17800D78F26 /* JPPForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPPForm.h; sourceTree = "<group>"; };
-		8E9CDC511A09D17800D78F26 /* JPPForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPPForm.m; sourceTree = "<group>"; };
-		8E9CDC521A09D17800D78F26 /* JPurpose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPurpose.h; sourceTree = "<group>"; };
-		8E9CDC531A09D17800D78F26 /* JPurpose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPurpose.m; sourceTree = "<group>"; };
-		8E9CDC561A09D2A800D78F26 /* JMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMember.h; sourceTree = "<group>"; };
-		8E9CDC571A09D2A800D78F26 /* JMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMember.m; sourceTree = "<group>"; };
-		8EF745271A0B0B89005B47A8 /* PurposeCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurposeCreateViewController.h; sourceTree = "<group>"; };
-		8EF745281A0B0B89005B47A8 /* PurposeCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurposeCreateViewController.m; sourceTree = "<group>"; };
 		8EF7452D1A0B10DE005B47A8 /* UITextField+LabelAndImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LabelAndImage.h"; sourceTree = "<group>"; };
 		8EF7452E1A0B10DE005B47A8 /* UITextField+LabelAndImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LabelAndImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,21 +198,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E6256B71A08A12100AC79B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8E6256981A08A12100AC79B7 = {
 			isa = PBXGroup;
 			children = (
-				8E6256A31A08A12100AC79B7 /* Youyi */,
-				8E6256BD1A08A12100AC79B7 /* YouyiTests */,
+				8E6256A31A08A12100AC79B7 /* YuShenPi */,
 				8E6256A21A08A12100AC79B7 /* Products */,
 				8E9CDC401A08ABC100D78F26 /* Frameworks */,
 			);
@@ -247,16 +213,14 @@
 		8E6256A21A08A12100AC79B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E6256A11A08A12100AC79B7 /* Youyi.app */,
-				8E6256BA1A08A12100AC79B7 /* YouyiTests.xctest */,
+				8E6256A11A08A12100AC79B7 /* YuShenPi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E6256A31A08A12100AC79B7 /* Youyi */ = {
+		8E6256A31A08A12100AC79B7 /* YuShenPi */ = {
 			isa = PBXGroup;
 			children = (
-				8E9CDC4F1A09D17800D78F26 /* DataModle */,
 				8E9CDC3C1A08A9B200D78F26 /* ViewController */,
 				8E6256CA1A08A24B00AC79B7 /* GlobalInfo */,
 				8E6256CD1A08A24B00AC79B7 /* Lib */,
@@ -269,7 +233,8 @@
 				8E6256B31A08A12100AC79B7 /* LaunchScreen.xib */,
 				8E6256A41A08A12100AC79B7 /* Supporting Files */,
 			);
-			path = Youyi;
+			name = YuShenPi;
+			path = YuShenPi;
 			sourceTree = "<group>";
 		};
 		8E6256A41A08A12100AC79B7 /* Supporting Files */ = {
@@ -277,23 +242,6 @@
 			children = (
 				8E6256A51A08A12100AC79B7 /* Info.plist */,
 				8E6256A61A08A12100AC79B7 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8E6256BD1A08A12100AC79B7 /* YouyiTests */ = {
-			isa = PBXGroup;
-			children = (
-				8E6256C01A08A12100AC79B7 /* YouyiTests.m */,
-				8E6256BE1A08A12100AC79B7 /* Supporting Files */,
-			);
-			path = YouyiTests;
-			sourceTree = "<group>";
-		};
-		8E6256BE1A08A12100AC79B7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8E6256BF1A08A12100AC79B7 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -485,7 +433,6 @@
 		8E9CDC3C1A08A9B200D78F26 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8EF745261A0B0B3F005B47A8 /* Purpose */,
 				8E9CDC3D1A08A9B200D78F26 /* JBaseViewController.h */,
 				8E9CDC3E1A08A9B200D78F26 /* JBaseViewController.m */,
 				8E9CDC431A09BFD300D78F26 /* HomeViewController.h */,
@@ -503,37 +450,15 @@
 				8E62576A1A08A69900AC79B7 /* Foundation.framework */,
 			);
 			name = Frameworks;
-			path = Youyi;
-			sourceTree = "<group>";
-		};
-		8E9CDC4F1A09D17800D78F26 /* DataModle */ = {
-			isa = PBXGroup;
-			children = (
-				8E9CDC501A09D17800D78F26 /* JPPForm.h */,
-				8E9CDC511A09D17800D78F26 /* JPPForm.m */,
-				8E9CDC521A09D17800D78F26 /* JPurpose.h */,
-				8E9CDC531A09D17800D78F26 /* JPurpose.m */,
-				8E9CDC561A09D2A800D78F26 /* JMember.h */,
-				8E9CDC571A09D2A800D78F26 /* JMember.m */,
-			);
-			path = DataModle;
-			sourceTree = "<group>";
-		};
-		8EF745261A0B0B3F005B47A8 /* Purpose */ = {
-			isa = PBXGroup;
-			children = (
-				8EF745271A0B0B89005B47A8 /* PurposeCreateViewController.h */,
-				8EF745281A0B0B89005B47A8 /* PurposeCreateViewController.m */,
-			);
-			name = Purpose;
+			path = YuShenPi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E6256A01A08A12100AC79B7 /* Youyi */ = {
+		8E6256A01A08A12100AC79B7 /* YuShenPi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E6256C41A08A12100AC79B7 /* Build configuration list for PBXNativeTarget "Youyi" */;
+			buildConfigurationList = 8E6256C41A08A12100AC79B7 /* Build configuration list for PBXNativeTarget "YuShenPi" */;
 			buildPhases = (
 				8E62569D1A08A12100AC79B7 /* Sources */,
 				8E62569E1A08A12100AC79B7 /* Frameworks */,
@@ -543,28 +468,10 @@
 			);
 			dependencies = (
 			);
-			name = Youyi;
-			productName = Youyi;
-			productReference = 8E6256A11A08A12100AC79B7 /* Youyi.app */;
+			name = YuShenPi;
+			productName = YuShenPi;
+			productReference = 8E6256A11A08A12100AC79B7 /* YuShenPi.app */;
 			productType = "com.apple.product-type.application";
-		};
-		8E6256B91A08A12100AC79B7 /* YouyiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8E6256C71A08A12100AC79B7 /* Build configuration list for PBXNativeTarget "YouyiTests" */;
-			buildPhases = (
-				8E6256B61A08A12100AC79B7 /* Sources */,
-				8E6256B71A08A12100AC79B7 /* Frameworks */,
-				8E6256B81A08A12100AC79B7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8E6256BC1A08A12100AC79B7 /* PBXTargetDependency */,
-			);
-			name = YouyiTests;
-			productName = YouyiTests;
-			productReference = 8E6256BA1A08A12100AC79B7 /* YouyiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -578,13 +485,9 @@
 					8E6256A01A08A12100AC79B7 = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					8E6256B91A08A12100AC79B7 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 8E6256A01A08A12100AC79B7;
-					};
 				};
 			};
-			buildConfigurationList = 8E62569C1A08A12100AC79B7 /* Build configuration list for PBXProject "Youyi" */;
+			buildConfigurationList = 8E62569C1A08A12100AC79B7 /* Build configuration list for PBXProject "YuShenPi" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -597,8 +500,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E6256A01A08A12100AC79B7 /* Youyi */,
-				8E6256B91A08A12100AC79B7 /* YouyiTests */,
+				8E6256A01A08A12100AC79B7 /* YuShenPi */,
 			);
 		};
 /* End PBXProject section */
@@ -615,13 +517,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E6256B81A08A12100AC79B7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -631,7 +526,6 @@
 			files = (
 				8E6257581A08A24B00AC79B7 /* MJRefreshFooterView.m in Sources */,
 				8E6257631A08A24B00AC79B7 /* SDWebImageManager.m in Sources */,
-				8E9CDC541A09D17800D78F26 /* JPPForm.m in Sources */,
 				8E6257431A08A24B00AC79B7 /* AFURLConnectionOperation.m in Sources */,
 				8E6257591A08A24B00AC79B7 /* MJRefreshHeaderView.m in Sources */,
 				8E62574C1A08A24B00AC79B7 /* UIView+SuperView.m in Sources */,
@@ -641,7 +535,6 @@
 				8E62575C1A08A24B00AC79B7 /* UIView+Extension.m in Sources */,
 				8EF7452F1A0B10DE005B47A8 /* UITextField+LabelAndImage.m in Sources */,
 				8E62575A1A08A24B00AC79B7 /* UIScrollView+Extension.m in Sources */,
-				8EF745291A0B0B89005B47A8 /* PurposeCreateViewController.m in Sources */,
 				8E6257421A08A24B00AC79B7 /* AFPropertyListRequestOperation.m in Sources */,
 				8E6257461A08A24B00AC79B7 /* NSData+Base64.m in Sources */,
 				8E6256AD1A08A12100AC79B7 /* ViewController.m in Sources */,
@@ -649,7 +542,6 @@
 				8E6256AA1A08A12100AC79B7 /* AppDelegate.m in Sources */,
 				8E6257481A08A24B00AC79B7 /* NSObject+PGPerformSelectorOnMainThreadWithThreeObjects.m in Sources */,
 				8E6257491A08A24B00AC79B7 /* NSString+Base64.m in Sources */,
-				8E9CDC581A09D2A800D78F26 /* JMember.m in Sources */,
 				8E6257511A08A24B00AC79B7 /* FMDatabasePool.m in Sources */,
 				8E62574F1A08A24B00AC79B7 /* FMDatabase.m in Sources */,
 				8E6257441A08A24B00AC79B7 /* AFXMLRequestOperation.m in Sources */,
@@ -661,7 +553,6 @@
 				8E6257621A08A24B00AC79B7 /* SDWebImageDownloader.m in Sources */,
 				8E6257561A08A24B00AC79B7 /* MJRefreshBaseView.m in Sources */,
 				8E6257521A08A24B00AC79B7 /* FMDatabaseQueue.m in Sources */,
-				8E9CDC551A09D17800D78F26 /* JPurpose.m in Sources */,
 				8E6257531A08A24B00AC79B7 /* FMResultSet.m in Sources */,
 				8E6257611A08A24B00AC79B7 /* SDWebImageDecoder.m in Sources */,
 				8E62574B1A08A24B00AC79B7 /* UIDevice-Hardware.m in Sources */,
@@ -684,23 +575,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E6256B61A08A12100AC79B7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8E6256C11A08A12100AC79B7 /* YouyiTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8E6256BC1A08A12100AC79B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8E6256A01A08A12100AC79B7 /* Youyi */;
-			targetProxy = 8E6256BB1A08A12100AC79B7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8E6256AE1A08A12100AC79B7 /* Main.storyboard */ = {
@@ -803,14 +678,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				INFOPLIST_FILE = Youyi/Info.plist;
+				INFOPLIST_FILE = YuShenPi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Youyi/Lib/UMeng",
+					"$(PROJECT_DIR)/YuShenPi/Lib/UMeng",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YuShenPi;
 			};
 			name = Debug;
 		};
@@ -819,55 +694,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				INFOPLIST_FILE = Youyi/Info.plist;
+				INFOPLIST_FILE = YuShenPi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Youyi/Lib/UMeng",
+					"$(PROJECT_DIR)/YuShenPi/Lib/UMeng",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		8E6256C81A08A12100AC79B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = YouyiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Youyi.app/Youyi";
-			};
-			name = Debug;
-		};
-		8E6256C91A08A12100AC79B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = YouyiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Youyi.app/Youyi";
+				PRODUCT_NAME = YuShenPi;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E62569C1A08A12100AC79B7 /* Build configuration list for PBXProject "Youyi" */ = {
+		8E62569C1A08A12100AC79B7 /* Build configuration list for PBXProject "YuShenPi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E6256C21A08A12100AC79B7 /* Debug */,
@@ -876,20 +717,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E6256C41A08A12100AC79B7 /* Build configuration list for PBXNativeTarget "Youyi" */ = {
+		8E6256C41A08A12100AC79B7 /* Build configuration list for PBXNativeTarget "YuShenPi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E6256C51A08A12100AC79B7 /* Debug */,
 				8E6256C61A08A12100AC79B7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8E6256C71A08A12100AC79B7 /* Build configuration list for PBXNativeTarget "YouyiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8E6256C81A08A12100AC79B7 /* Debug */,
-				8E6256C91A08A12100AC79B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
