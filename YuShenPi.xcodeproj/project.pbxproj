@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E57C0151A12FFC8000455DA /* ForgetPswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57C0101A12FFC8000455DA /* ForgetPswViewController.m */; };
+		8E57C0161A12FFC8000455DA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57C0121A12FFC8000455DA /* LoginViewController.m */; };
+		8E57C0171A12FFC8000455DA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57C0141A12FFC8000455DA /* RegisterViewController.m */; };
+		8E57C01A1A130035000455DA /* PicsManageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57C0191A130035000455DA /* PicsManageScrollView.m */; };
+		8E57C01D1A13009D000455DA /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57C01C1A13009D000455DA /* SMPageControl.m */; };
+		8E57C0201A1300D5000455DA /* UIImage+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57C01F1A1300D5000455DA /* UIImage+Size.m */; };
+		8E57C0231A133B36000455DA /* ServiceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57C0221A133B36000455DA /* ServiceListViewController.m */; };
+		8E57C0261A13447C000455DA /* ServiceListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57C0251A13447C000455DA /* ServiceListItemCell.m */; };
 		8E6256A71A08A12100AC79B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6256A61A08A12100AC79B7 /* main.m */; };
 		8E6256AA1A08A12100AC79B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6256A91A08A12100AC79B7 /* AppDelegate.m */; };
 		8E6256AD1A08A12100AC79B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6256AC1A08A12100AC79B7 /* ViewController.m */; };
@@ -67,6 +75,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E57C00F1A12FFC8000455DA /* ForgetPswViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPswViewController.h; sourceTree = "<group>"; };
+		8E57C0101A12FFC8000455DA /* ForgetPswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPswViewController.m; sourceTree = "<group>"; };
+		8E57C0111A12FFC8000455DA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8E57C0121A12FFC8000455DA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8E57C0131A12FFC8000455DA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		8E57C0141A12FFC8000455DA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		8E57C0181A130035000455DA /* PicsManageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicsManageScrollView.h; sourceTree = "<group>"; };
+		8E57C0191A130035000455DA /* PicsManageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicsManageScrollView.m; sourceTree = "<group>"; };
+		8E57C01B1A13009D000455DA /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
+		8E57C01C1A13009D000455DA /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
+		8E57C01E1A1300D5000455DA /* UIImage+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Size.h"; sourceTree = "<group>"; };
+		8E57C01F1A1300D5000455DA /* UIImage+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Size.m"; sourceTree = "<group>"; };
+		8E57C0211A133B36000455DA /* ServiceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceListViewController.h; sourceTree = "<group>"; };
+		8E57C0221A133B36000455DA /* ServiceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceListViewController.m; sourceTree = "<group>"; };
+		8E57C0241A13447C000455DA /* ServiceListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceListItemCell.h; sourceTree = "<group>"; };
+		8E57C0251A13447C000455DA /* ServiceListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceListItemCell.m; sourceTree = "<group>"; };
 		8E6256A11A08A12100AC79B7 /* YuShenPi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YuShenPi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6256A51A08A12100AC79B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E6256A61A08A12100AC79B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -233,7 +257,6 @@
 				8E6256B31A08A12100AC79B7 /* LaunchScreen.xib */,
 				8E6256A41A08A12100AC79B7 /* Supporting Files */,
 			);
-			name = YuShenPi;
 			path = YuShenPi;
 			sourceTree = "<group>";
 		};
@@ -304,6 +327,8 @@
 		8E6256E81A08A24B00AC79B7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8E57C01E1A1300D5000455DA /* UIImage+Size.h */,
+				8E57C01F1A1300D5000455DA /* UIImage+Size.m */,
 				8E6256E91A08A24B00AC79B7 /* NSData+Base64.h */,
 				8E6256EA1A08A24B00AC79B7 /* NSData+Base64.m */,
 				8E6256EB1A08A24B00AC79B7 /* NSData+UTF_8.h */,
@@ -433,10 +458,24 @@
 		8E9CDC3C1A08A9B200D78F26 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8E57C01B1A13009D000455DA /* SMPageControl.h */,
+				8E57C01C1A13009D000455DA /* SMPageControl.m */,
+				8E57C0181A130035000455DA /* PicsManageScrollView.h */,
+				8E57C0191A130035000455DA /* PicsManageScrollView.m */,
+				8E57C00F1A12FFC8000455DA /* ForgetPswViewController.h */,
+				8E57C0101A12FFC8000455DA /* ForgetPswViewController.m */,
+				8E57C0111A12FFC8000455DA /* LoginViewController.h */,
+				8E57C0121A12FFC8000455DA /* LoginViewController.m */,
+				8E57C0131A12FFC8000455DA /* RegisterViewController.h */,
+				8E57C0141A12FFC8000455DA /* RegisterViewController.m */,
 				8E9CDC3D1A08A9B200D78F26 /* JBaseViewController.h */,
 				8E9CDC3E1A08A9B200D78F26 /* JBaseViewController.m */,
 				8E9CDC431A09BFD300D78F26 /* HomeViewController.h */,
 				8E9CDC441A09BFD300D78F26 /* HomeViewController.m */,
+				8E57C0211A133B36000455DA /* ServiceListViewController.h */,
+				8E57C0221A133B36000455DA /* ServiceListViewController.m */,
+				8E57C0241A13447C000455DA /* ServiceListItemCell.h */,
+				8E57C0251A13447C000455DA /* ServiceListItemCell.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -525,29 +564,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6257581A08A24B00AC79B7 /* MJRefreshFooterView.m in Sources */,
+				8E57C0171A12FFC8000455DA /* RegisterViewController.m in Sources */,
 				8E6257631A08A24B00AC79B7 /* SDWebImageManager.m in Sources */,
 				8E6257431A08A24B00AC79B7 /* AFURLConnectionOperation.m in Sources */,
 				8E6257591A08A24B00AC79B7 /* MJRefreshHeaderView.m in Sources */,
+				8E57C0161A12FFC8000455DA /* LoginViewController.m in Sources */,
 				8E62574C1A08A24B00AC79B7 /* UIView+SuperView.m in Sources */,
 				8E6257661A08A24B00AC79B7 /* UIImageView+WebCache.m in Sources */,
+				8E57C0201A1300D5000455DA /* UIImage+Size.m in Sources */,
 				8E62573C1A08A24B00AC79B7 /* AFImageRequestOperation.m in Sources */,
 				8E62573E1A08A24B00AC79B7 /* AFJSONUtilities.m in Sources */,
 				8E62575C1A08A24B00AC79B7 /* UIView+Extension.m in Sources */,
+				8E57C0151A12FFC8000455DA /* ForgetPswViewController.m in Sources */,
 				8EF7452F1A0B10DE005B47A8 /* UITextField+LabelAndImage.m in Sources */,
 				8E62575A1A08A24B00AC79B7 /* UIScrollView+Extension.m in Sources */,
 				8E6257421A08A24B00AC79B7 /* AFPropertyListRequestOperation.m in Sources */,
 				8E6257461A08A24B00AC79B7 /* NSData+Base64.m in Sources */,
 				8E6256AD1A08A12100AC79B7 /* ViewController.m in Sources */,
 				8E6257471A08A24B00AC79B7 /* NSData+UTF_8.m in Sources */,
+				8E57C0231A133B36000455DA /* ServiceListViewController.m in Sources */,
 				8E6256AA1A08A12100AC79B7 /* AppDelegate.m in Sources */,
 				8E6257481A08A24B00AC79B7 /* NSObject+PGPerformSelectorOnMainThreadWithThreeObjects.m in Sources */,
 				8E6257491A08A24B00AC79B7 /* NSString+Base64.m in Sources */,
+				8E57C01D1A13009D000455DA /* SMPageControl.m in Sources */,
 				8E6257511A08A24B00AC79B7 /* FMDatabasePool.m in Sources */,
 				8E62574F1A08A24B00AC79B7 /* FMDatabase.m in Sources */,
 				8E6257441A08A24B00AC79B7 /* AFXMLRequestOperation.m in Sources */,
 				8E6257401A08A24B00AC79B7 /* AFNetworkReachability.m in Sources */,
 				8E6257601A08A24B00AC79B7 /* SDImageCache.m in Sources */,
 				8E62575D1A08A24B00AC79B7 /* OpenUDID.m in Sources */,
+				8E57C01A1A130035000455DA /* PicsManageScrollView.m in Sources */,
 				8E62575E1A08A24B00AC79B7 /* MBProgressHUD.m in Sources */,
 				8E6257541A08A24B00AC79B7 /* GuideViewController.m in Sources */,
 				8E6257621A08A24B00AC79B7 /* SDWebImageDownloader.m in Sources */,
@@ -569,6 +615,7 @@
 				8E62574A1A08A24B00AC79B7 /* Toast+UIView.m in Sources */,
 				8E62575B1A08A24B00AC79B7 /* UIScrollView+MJRefresh.m in Sources */,
 				8E62573A1A08A24B00AC79B7 /* AFHTTPClient.m in Sources */,
+				8E57C0261A13447C000455DA /* ServiceListItemCell.m in Sources */,
 				8E6257651A08A24B00AC79B7 /* UIButton+WebCache.m in Sources */,
 				8E6257411A08A24B00AC79B7 /* AFNetworkReachabilityManager.m in Sources */,
 				8E62573F1A08A24B00AC79B7 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -679,7 +726,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = YuShenPi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -695,7 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = YuShenPi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

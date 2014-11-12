@@ -12,10 +12,21 @@
 #import "XCommon.h"
 #import "GlobalConfig.h"
 #import "AppDelegate.h"
+#import "MarkedWordsConfig.h"
+#import "AFNetworkReachability.h"
+#import "AFHTTPClient.h"
+#import "AFJSONRequestOperation.h"
 
 #define  kTopBtnSize  34.0f
-#define  kBackBtnFrame CGRectMake(10.0f, (NAVBAR_HEIGHT-kTopBtnSize)/2.0, kTopBtnSize, kTopBtnSize)
+#define  kBackBtnFrame CGRectMake(10.0f, (NAVBAR_HEIGHT-26.0)/2.0, 37.5, 26.0)
 #define  kViewEdgeSize    10.0f
+
+typedef enum{
+    KCellWindowType_Gongshang = 0,
+    KCellWindowType_Zhijian,
+    KCellWindowType_Guoshui,
+    KCellWindowType_Gongan
+}ServiceCellWindowType;
 
 @interface JBaseViewController : UIViewController<MBProgressHUDDelegate,UIGestureRecognizerDelegate>
 

@@ -62,12 +62,9 @@
 #define USERNAME        @"userName"         //用户名
 #define PASSWORD        @"password"         //密码
 #define USERINFO        @"userInfo"         //用户信息
-#define STARTADIMGURL   @"startADImg"       //启动广告图下载URL
-#define STARTAR         @"startAR"          //进入应该自动启动AR扫描
 #define SESSIONID       @"sessionID"        //sessionID
 #define GuideStatus     @"guideStatus"      //引导页状态
-#define SEARCHRANGE     @"searchRange"      //搜索范围
-#define KDefaultSearchRange   @"5"          //默认搜索范围
+#define REMEMBERPS      @"rememberPassword" //记住密码
 
 #pragma mark - FontSize
 #define KTableCellFontCommon  15.0

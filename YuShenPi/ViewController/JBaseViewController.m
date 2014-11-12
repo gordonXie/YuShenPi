@@ -81,8 +81,8 @@
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = kBackBtnFrame;
-//    [btn setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_back_normal@2x",appDelegate.configInfo.colorType]] forState:UIControlStateNormal];
-//    [btn setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_back_selected@2x",appDelegate.configInfo.colorType]] forState:UIControlStateHighlighted];
+    [btn setBackgroundImage:[UIImage imageNamed:@"login_reback_normal@2x"] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageNamed:@"login_reback_pressed@2x"] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(backBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 }
