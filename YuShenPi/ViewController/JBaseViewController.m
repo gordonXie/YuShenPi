@@ -8,7 +8,6 @@
 
 #import "JBaseViewController.h"
 #import "AppDelegate.h"
-#import "AFNetWorking.h"
 
 #define KLeftBtnTag  49
 #define KRightBtnTag 50
@@ -23,6 +22,7 @@
 @synthesize titleView,titleLabel;
 @synthesize statusBarH;
 @synthesize m_loading;
+@synthesize runningRequest;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -150,7 +150,7 @@
 
 - (void)onRightBtnClick:(id)sender
 {
-    
+
 }
 
 - (UIButton*)getRightBtn
@@ -189,6 +189,10 @@
     }
 	[m_loading removeFromSuperview];
 	m_loading = nil;
+    
+    if (runningRequest!=nil) {
+        [runningRequest cancel];
+    }
 }
 
 - (BOOL)shouldAutorotate
@@ -215,16 +219,17 @@
 {
     
 }
+
 @end
 
 @implementation JBaseViewController (NetRequest)
 #pragma mark - 检查网络连接
 - (void)checkNetwork
 {
-    if (![AFNetworkReachability checkNetworkConnectivity]) {
-        [self.view makeToast:@"网络未连接"];
-        return;
-    }
+//    if (![AFNetworkReachability checkNetworkConnectivity]) {
+//        [self.view makeToast:@"网络未连接"];
+//        return;
+//    }
 }
 #pragma mark - 解析数据请求结果
 - (void)requestResultAnalytic:(id)responseObject
@@ -280,6 +285,19 @@
     if (noDataView!=nil) {
         [noDataView removeFromSuperview];
     }
+}
+
+#pragma mark NetWebServiceRequestDelegate Methods
+- (void)netRequestFinished:(NetWebServiceRequest *)request
+      finishedInfoToResult:(NSString *)result
+              responseData:(NSData *)requestData{
+}
+
+- (void)netRequestFailed:(NetWebServiceRequest *)request didRequestError:(NSError *)error
+{
+    [self hudHidden];
+    NSDictionary *errDic = error.userInfo;
+    [self.view makeToast:[errDic objectForKey:@"NSLocalizedDescription"] duration:1.5f position:@"middle"];
 }
 
 //联网失败

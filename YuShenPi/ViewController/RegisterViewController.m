@@ -159,6 +159,7 @@
 }
 - (void)onGetVerBtnClick:(id)sender
 {
+    /*
     if ([XCommon isBlankString:_accountTF.text]) {
         [self.view makeToast:@"请输入手机号码"];
         return;
@@ -269,7 +270,7 @@
          [self netFailureWithError:error];
          }
      ];
-    
+    */
 }
 
 - (void)retunToHomepage

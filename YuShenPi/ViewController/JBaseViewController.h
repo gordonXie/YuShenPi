@@ -13,9 +13,9 @@
 #import "GlobalConfig.h"
 #import "AppDelegate.h"
 #import "MarkedWordsConfig.h"
-#import "AFNetworkReachability.h"
-#import "AFHTTPClient.h"
-#import "AFJSONRequestOperation.h"
+#import "NetWebServiceRequest.h"
+#import "GDataXMLNode.h"
+#import "SoapXmlParseHelper.h"
 
 #define  kTopBtnSize  34.0f
 #define  kBackBtnFrame CGRectMake(10.0f, (NAVBAR_HEIGHT-26.0)/2.0, 37.5, 26.0)
@@ -34,6 +34,7 @@ typedef enum{
 @property(nonatomic,strong) UILabel *titleLabel;
 @property(nonatomic,assign) NSUInteger statusBarH;
 @property(nonatomic,strong) MBProgressHUD *m_loading;
+@property (nonatomic,strong) NetWebServiceRequest* runningRequest;
 
 //初始化界面元素
 - (void)initViews;
@@ -68,7 +69,7 @@ typedef enum{
 @end
 
 
-@interface JBaseViewController (NetRequest)
+@interface JBaseViewController (NetRequest)<NetWebServiceRequestDelegate>
 - (void)checkNetwork;
 - (void)requestResultAnalytic:(id)responseObject;
 //添加无数据提示

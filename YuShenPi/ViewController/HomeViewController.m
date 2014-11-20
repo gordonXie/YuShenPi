@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "PicsManageScrollView.h"
 #import "ServiceListViewController.h"
+#import "NetWebServiceRequest.h"
 
 float KBLUEPICSCROLLVIEWH;
 const float KTITLEBARHEIHGT  = 40.0;
@@ -16,7 +17,7 @@ const float KTITLEFONTSIZE   = 20.0;
 const float KTABLEVIEWHEIGHT = 140.0;
 const float KTABLECELLHEIGHT = 30.0;
 
-@interface HomeViewController ()<PicScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface HomeViewController ()<PicScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,NetWebServiceRequestDelegate>
 {
     UIScrollView    *_baseScrollView;
     
@@ -40,7 +41,7 @@ const float KTABLECELLHEIGHT = 30.0;
     [super initViews];
     [self setTitle:@"服务中心"];
     [self addLeftBtn:@"退出"];
-    [self addRightBtn:@"导航"];
+//    [self addRightBtn:@"导航"];
     
     [self addBaseScrollView];
 }
@@ -76,6 +77,8 @@ const float KTABLECELLHEIGHT = 30.0;
 
 - (void)addTableView
 {
+    [self requestHotWindows];
+    
     UIImageView *titleImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, _startH, SCREEN_WIDTH, KTITLEBARHEIHGT)];
     titleImgView.image = [UIImage imageNamed:@""];
     [_baseScrollView addSubview:titleImgView];
@@ -183,11 +186,6 @@ const float KTABLECELLHEIGHT = 30.0;
     [_baseScrollView setContentSize:CGSizeMake(SCREEN_WIDTH, lblStartH+lblHeight+10)];
 }
 
-- (void)onRightBtnClick:(id)sender
-{
-   
-}
-
 #pragma mark - PicSelectDelegate
 - (void)onPicSelectByIndex:(int)index
 {
@@ -262,6 +260,42 @@ const float KTABLECELLHEIGHT = 30.0;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 
 }
+
+#pragma mark - requestHotWindows
+-(void)requestHotWindows
+{
+    /*
+     方法名：getHotService
+     */
+    
+    NSString *num = @"5";
+    NSMutableDictionary *dicBody = [[NSMutableDictionary alloc]init];
+    [dicBody setObject:num forKey:@"num"];
+    
+    NetWebServiceRequest *request = [NetWebServiceRequest serviceRequestMethod:@"getHotService" SoapMessage:@"5" forPress:@"num"];
+    [request startAsynchronous];
+    [request setDelegate:self];
+    self.runningRequest = request;
+    
+    [self hudShowWithLabel:@"数据正在刷新..."];
+}
+
+#pragma mark NetWebServiceRequestDelegate Methods
+- (void)netRequestFinished:(NetWebServiceRequest *)request
+      finishedInfoToResult:(NSString *)result
+              responseData:(NSData *)requestData{
+    CLog(@"%@",result);
+    [self hudHidden];
+    
+    _tableArray = [SoapXmlParseHelper XmlToArray:result];
+    if (_tableArray==nil||_tableArray.count==0) {
+//        [self addInfoLabel];
+    }else{
+        [_tableView reloadData];
+    }
+}
+
+
 
 -(void)onGongShangClick:(id)sender
 {

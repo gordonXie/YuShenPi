@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  YuShenPi
+//
+//  Created by xieguocheng on 14-11-13.
+//  Copyright (c) 2014年 xieguocheng. All rights reserved.
+//
+
+#ifndef YuShenPi_PrefixHeader_pch
+#define YuShenPi_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+//#import "ASIFormDataRequest.h"
+//#import "NetWebServiceRequest.h"
+//#import "XCommon.h"
+
+
+#define ERROR_INFO(ErrorDomain,ErrorCode,ErroeDescript) [[NSError alloc] initWithDomain:[NSString stringWithFormat:ErrorDomain] code:ErrorCode userInfo:[NSDictionary dictionaryWithObject:ErroeDescript forKey:NSLocalizedDescriptionKey]];
+
+
+#define ERROR_NOINFO(ErrorDomain,ErrorCode) [[NSError alloc] initWithDomain:[NSString stringWithFormat:ErrorDomain] code:ErrorCode userInfo:nil];
+
+
+#define ERROR_DICTINFO(ErrorDomain,ErrorCode,ErroeDictionary) [[NSError alloc] initWithDomain:[NSString stringWithFormat:ErrorDomain] code:ErrorCode userInfo:ErroeDictionary];
+
+#ifdef DEBUG
+
+
+//#define CLog(format, ...) NSLog(format, ##__VA_ARGS__);
+#define CLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+
+#else
+
+#define CLog(format, ...)
+
+
+#endif
+#endif
+
+#endif

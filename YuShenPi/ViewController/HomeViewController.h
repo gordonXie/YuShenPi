@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 xieguocheng. All rights reserved.
 //
 
-#import "JBaseViewController.h"
+#import "JNaviViewController.h"
 
-@interface HomeViewController : JBaseViewController
+@interface HomeViewController : JNaviViewController
 
 @end

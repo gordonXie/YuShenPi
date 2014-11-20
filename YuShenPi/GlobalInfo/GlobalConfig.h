@@ -37,12 +37,13 @@
 
 #pragma mark - netWork
 #ifdef KZFT_TEST
-//#define Base_URL @"http://192.168.171.114/jiajia_server/"
-#define Base_URL @"http://10.6.144.3:8080/jiajia_server/"
+#define Base_URL @"http://120.36.76.250:8002/service/mysqlService.asmx"
 #else
-#define Base_URL @"http://api.jia.dtenga.com/jiajia_server/"
-
+#define Base_URL @"http://120.36.76.250:8001/service/mysqlService.asmx"
 #endif
+
+#define Base_NameSpace @"bfzy"
+#define DB_NAME @"bfzy.db"
 
 #define KPAGESIZE   @"10"
 //服务器返回“0”，表示请求成功
@@ -70,5 +71,7 @@
 #define KTableCellFontCommon  15.0
 #define KTableCellFontBig     18.0
 #define KTableCellFontSmall   12.0
+
+#import "YuShenPi-Prefix.pch"
 
 #endif

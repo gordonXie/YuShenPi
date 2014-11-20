@@ -132,6 +132,7 @@
 
 - (void)onGetVerBtnClick:(id)sender
 {
+    /*
     if ([XCommon isBlankString:_telTF.text]) {
         [self.view makeToast:@"请输入手机号码"];
         return;
@@ -231,6 +232,7 @@
                  [self netFailureWithError:error];
              }
      ];
+     */
 }
 
 #pragma UITextFieldDelegate

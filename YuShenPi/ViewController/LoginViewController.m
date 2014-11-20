@@ -10,7 +10,7 @@
 #import "ForgetPswViewController.h"
 #import "RegisterViewController.h"
 #import "UITextField+LabelAndImage.h"
-#import "AFHTTPClient.h"
+//#import "AFHTTPClient.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>
 {
@@ -158,6 +158,7 @@
 
 - (void)onLoginBtnClick:(id)sender
 {
+    /*
     if (![AFNetworkReachability checkNetworkConnectivity]) {
         [self.view makeToast:KNetwork_NotReachable];
         return;
@@ -218,6 +219,7 @@
                  [self netFailureWithError:error];
              }
      ];
+     */
 }
 
 //添加功能链接
